@@ -1,4 +1,4 @@
-# Pixel Truth
+# True Pixel
 
 Ground-truth captures of a real application's rendering, taken
 headlessly, for checking a design file against pixels instead of
