@@ -23,6 +23,8 @@ selected pill.
 
 ## What is in here
 
+- `Makefile` is the front door: `make dev`, `make run`, `make build`,
+  `make test`, `make release`. Nix does the work under every target.
 - `capture.sh` drives the installed app under a headless X server and
   saves every screen and dialog as PNGs. Every click is followed by a
   pixel check, so a moved widget fails the run instead of quietly
@@ -36,10 +38,12 @@ selected pill.
 ## Running it
 
 ```
-nix develop -c bash capture.sh
+make run
 ```
 
-Append `connecting` to capture only the disconnected status page.
+`make dev` enters the capture shell directly, and
+`make run ARGS=connecting` captures only the disconnected status page.
+Everything below is what `make run` does.
 
 The flake shell provides every tool the captures call by name
 (xdotool, Xvfb, ImageMagick, fontconfig), pinned to the nixpkgs

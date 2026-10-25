@@ -4,3 +4,6 @@ out/
 home/
 runtime/
 *.log
+
+# make build's nix output symlink.
+result
